@@ -1,0 +1,23 @@
+---
+layout: default
+section: blog
+---
+<div id="page">
+    <h1 class="emphnext">
+      	<a href="{{ post.url }}">{{ page.title }}</a> 
+    	<span class="post-date">{{ page.date | date_to_string }}</span>
+    </h1>
+{{ content }}
+    <div id="pagination">
+        {% if page.next.url %}
+            <a href="{{ page.next.url }}" class="forward">{{ page.next.title }} ❯❯</a>
+        {% endif %}
+        
+        <a href="/">Home</a> | <a href="/archive.html">Archives</a>
+        
+        {% if page.previous.url %}
+            <a href="{{ page.previous.url }}" class="back">❮❮ {{ page.previous.title }}</a>
+        {% endif %}
+    </div>
+</div>
+

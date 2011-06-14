@@ -1,0 +1,44 @@
+---
+layout: default
+title: StartupAbility
+section: blog
+---
+<div id="page">
+	<h1>What does it take to work in a startup?</h1>
+	<p>
+	I've worked in startups since 1999 and can help you learn more about what startups do
+	and how they do it. I can also be a coach for your career and give you an honest assessment
+	of your skills and personality: your <em>startup-ability</em>. Yeah, I just made that up.
+	</p>
+	<p>
+	First lesson: all startups have a big TODO list that actually never gets done because there's
+	always something more important to do. Here's the TODO for this site:
+	<ul>
+		<li>How to hire me as a coach (or interviewer for your startup)</li>
+		<li>Anatomy of a startup</li>
+		<li>Continuous Deployment Techniques</li>
+	</ul>
+	<p>
+{% for post in paginator.posts %}
+<h1 class="emphnext">
+  	<a href="{{ post.url }}">{{ post.title }}</a> 
+	<span class="post-date">{{ post.date | date_to_string }}</span>
+</h1>
+{{ post.content }}
+<hr />
+{% endfor %}
+<div id="pagination">
+    {% if paginator.previous_page and paginator.previous_page != 1 %}
+        <a href="/page{{paginator.previous_page}}/" class="forward">Newer Posts ❯❯</a>
+    {% endif %}
+
+    {% if paginator.previous_page == 1 %}
+        <a href="/" class="forward"> Newer Posts ❯❯</a>
+    {% endif %}
+    
+    {% if paginator.next_page %}
+        <a href="/page{{paginator.next_page}}/" class="back">❮❮ Older Posts</a>
+    {% endif %}
+</div>
+
+</div>
