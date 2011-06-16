@@ -156,7 +156,7 @@ ul.compact li { list-style: none; }
 /* @end */
 
 /* @group Header */
-#header a { color: silver; }
+#header a { color: #666; }
 
 #header {
     color: silver;
@@ -256,6 +256,10 @@ img.maruku-png { }
     text-align: center;
 }
 
+#footer p {
+	text-align: center;
+}
+
 #pagination a.back {
     float: left;
 }
@@ -270,12 +274,12 @@ img.maruku-png { }
 }
 
 #navigation {
-    float: right;
-    font-size: .75em;
+    float: center;
+    font-size: 1.0em;
 }
 
 #navigation a {
-    color: darkgray;
+    color: #666;
 }
 
 hr {
